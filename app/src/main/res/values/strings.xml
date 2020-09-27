@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoginExample</string>
+    <string name="login_title">登入測試</string>
+    <string name="login_account">帳號</string>
+    <string name="login_account_hint">請輸入帳號</string>
+    <string name="login_password">密碼</string>
+    <string name="login_password_hint">請輸入密碼</string>
+    <string name="login_submit">登入</string>
+    <string name="user_title">測試使用者資料</string>
+    <string name="user_name_title">姓名</string>
+    <string name="user_phone_title">電話</string>
+    <string name="user_address_title">地址</string>
+</resources>

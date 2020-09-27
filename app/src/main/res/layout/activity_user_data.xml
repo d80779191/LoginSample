@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.example.loginexample.module.UserDataResponse" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_title"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/user_name_title"/>
+
+        <TextView
+            android:id="@+id/user_name_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_title"
+            android:textSize="25sp"
+            android:background="#CCCCCC"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/user_name"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.name}"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_title"
+            app:layout_constraintBottom_toTopOf="@+id/user_phone_title"/>
+
+        <TextView
+            android:id="@+id/user_phone_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_phone_title"
+            android:textSize="25sp"
+            android:background="#CCCCCC"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name"
+            app:layout_constraintBottom_toTopOf="@+id/user_phone"/>
+
+        <TextView
+            android:id="@+id/user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.phone}"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_phone_title"
+            app:layout_constraintBottom_toTopOf="@+id/user_address_title"/>
+
+        <TextView
+            android:id="@+id/user_address_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_address_title"
+            android:textSize="25sp"
+            android:background="#CCCCCC"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_phone"
+            app:layout_constraintBottom_toTopOf="@+id/user_address"/>
+
+        <TextView
+            android:id="@+id/user_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.address}"
+            android:textSize="25sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_address_title"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
